@@ -1,10 +1,10 @@
 # OpenAPI UI
 
-This is a React based single page app which will renders documentation from a valid OpenAPI 3.0.0-RC0 document.
+This is a React based single page app which renders documentation from a valid OpenAPI 3.0.0-RC0 document.
 
 # NOTE
 
-This project is work-in-progress/experimental at this stage. Contributions/Feedback welcome.
+This project is work-in-progress/experimental at this stage. Contributions and feedback welcome.
 
 ## Getting started
 

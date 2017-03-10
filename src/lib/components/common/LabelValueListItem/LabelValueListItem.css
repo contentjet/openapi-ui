@@ -1,0 +1,20 @@
+.labelValueListItem {
+  lost-utility: clearfix;
+  border-bottom: 1px #eee solid;
+  padding: 3px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .label {
+    display: inline-block;
+    width: 200px;
+  }
+
+  .value {
+    display: inline-block;
+    width: calc(100% - 200px);
+  }
+
+}

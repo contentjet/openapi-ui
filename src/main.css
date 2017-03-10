@@ -1,0 +1,48 @@
+@import 'normalize.css/normalize.css';
+@import 'variables';
+
+
+html,
+body {
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $anchor-color;
+  text-decoration: $anchor-text-decoration;
+  cursor: pointer;
+
+  &:hover {
+    color: $anchor-color-hover;
+    text-decoration: $anchor-text-decoration-hover;
+  }
+}
+
+p {
+  margin: .6em 0;
+}
+
+hr {
+  border-bottom: 0;
+  border-color: #ccc;
+  border-style: solid;
+}
+
+th {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 1em;
+  margin: 0;
+  font-weight: bold;
+}

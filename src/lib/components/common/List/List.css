@@ -1,0 +1,16 @@
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: block;
+  }
+
+  &.inline {
+    li {
+      display: inline-block;
+    }
+  }
+
+}

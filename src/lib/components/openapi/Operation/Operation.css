@@ -1,0 +1,40 @@
+.operation {
+
+  .heading {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .methodGet {
+
+  }
+
+  .methodPut {
+
+  }
+
+  .methodPost {
+
+  }
+
+  .methodDelete {
+
+  }
+
+  .methodOptions {
+
+  }
+
+  .methodHead {
+
+  }
+
+  .methodPatch {
+
+  }
+
+  .methodTrace {
+
+  }
+
+}

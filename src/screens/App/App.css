@@ -1,0 +1,21 @@
+$app-sidebar-width: 220px !default;
+$app-sidebar-background: #333 !default;
+$app-body-padding: 20px 15px 100px !default;
+$app-body-box-sizing: border-box !default;
+
+.app {
+
+  .sidebar {
+    position: fixed;
+    width: $app-sidebar-width;
+    height: 100%;
+    background: $app-sidebar-background;
+  }
+
+  .body {
+    width: calc(100% - $app-sidebar-width);
+    transform: translateX($app-sidebar-width);
+    padding: $app-body-padding;
+    box-sizing: $app-body-box-sizing;
+  }
+}

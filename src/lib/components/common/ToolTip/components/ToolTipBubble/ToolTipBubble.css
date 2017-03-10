@@ -1,0 +1,98 @@
+@import 'variables';
+
+@define-mixin arrowBoxBottom $background, $arrowSize: 8px {
+  &::after {
+    /* Setting top: 100% has a gap in IE :( */
+  	top: 99%;
+  	left: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-top-color: $background;
+  	border-width: $arrowSize;
+  	margin-left: -$arrowSize;
+  }
+}
+
+@define-mixin arrowBoxTop $background, $arrowSize: 8px {
+  &::after {
+    /* Setting top: 100% has a gap in IE :( */
+    bottom: 99%;
+  	left: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-bottom-color: $background;
+  	border-width: $arrowSize;
+  	margin-left: -$arrowSize;
+  }
+}
+
+@define-mixin arrowBoxLeft $background, $arrowSize: 8px {
+  &::after {
+    right: 100%;
+  	top: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-right-color: $background;
+  	border-width: $arrowSize;
+  	margin-top: -$arrowSize;
+  }
+}
+
+@define-mixin arrowBoxRight $background, $arrowSize: 8px {
+  &::after {
+    left: 100%;
+  	top: 50%;
+  	border: solid transparent;
+  	content: " ";
+  	height: 0;
+  	width: 0;
+  	position: absolute;
+  	pointer-events: none;
+  	border-left-color: $background;
+  	border-width: $arrowSize;
+  	margin-top: -$arrowSize;
+  }
+}
+
+$bubble-background-color: #666 !default;
+
+.bubble {
+  position: fixed;
+  background: $bubble-background-color;
+  color: white;
+  pointer-events: none;
+  font-size: 11px;
+  line-height: 1.5em;
+  padding: 8px;
+  border-radius: 4px;
+  max-width: 250px;
+  z-index: 1001;
+
+  &.top {
+    @mixin arrowBoxBottom $bubble-background-color;
+  }
+
+  &.bottom {
+    @mixin arrowBoxTop $bubble-background-color;
+  }
+
+  &.left {
+    @mixin arrowBoxRight $bubble-background-color;
+  }
+
+  &.right {
+    @mixin arrowBoxLeft $bubble-background-color;
+  }
+}

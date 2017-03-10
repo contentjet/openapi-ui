@@ -1,0 +1,9 @@
+$font-family: Arial, serif;
+$font-size: 14px;
+$line-height: 1.4em;
+$text-color: #444;
+
+$anchor-color: #20cbfd;
+$anchor-text-decoration: none;
+$anchor-color-hover: color($anchor-color lightness(-7%));
+$anchor-text-decoration-hover: none;
