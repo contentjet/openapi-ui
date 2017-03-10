@@ -8,7 +8,7 @@ import s from './Paths.css';
 function Paths(props) {
   const className = classnames(s.paths, props.className);
   return (
-    <div className={className}>
+    <section className={className}>
       <Heading
         id="paths"
         className={s.heading}
@@ -26,7 +26,7 @@ function Paths(props) {
           );
         })
       }
-    </div>
+    </section>
   );
 }
 Paths.propTypes = {

@@ -4,6 +4,10 @@ info:
   title: contentjet
   version: 1.0.0
   description: REST API for contentjet.io
+  contact:
+    name: Joe Blogs
+    url: http://example.com
+    email: will@example.com
 
 externalDocs:
   description: Hello world

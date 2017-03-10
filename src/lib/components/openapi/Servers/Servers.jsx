@@ -10,7 +10,7 @@ function Servers(props) {
   if (!props.servers) return null;
   const className = classnames(s.servers, props.className);
   return (
-    <div className={className}>
+    <section className={className}>
       <Heading
         className={s.heading}
         level={props.headingLevel}
@@ -28,7 +28,7 @@ function Servers(props) {
           })
         }
       </List>
-    </div>
+    </section>
   );
 }
 Servers.propTypes = {

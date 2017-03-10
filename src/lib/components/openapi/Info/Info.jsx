@@ -10,13 +10,18 @@ import s from './Info.css';
 function Info(props) {
   const className = classnames(s.info, props.className);
   return (
-    <div className={className}>
-      <Heading className={s.heading}>{ props.title }</Heading>
+    <section className={className}>
+      <Heading
+        id="info"
+        className={s.heading}
+      >
+        { props.title }
+      </Heading>
       <CommonMark>{ props.description }</CommonMark>
       { props.termsOfService ? <a href={props.termsOfService}>Terms of service</a> : null }
       <Contact {...props.contact} />
       { props.license ? <License {...props.license} /> : null }
-    </div>
+    </section>
   );
 }
 Info.propTypes = {

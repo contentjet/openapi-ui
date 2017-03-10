@@ -8,8 +8,13 @@ import s from './ExternalDocumentation.css';
 function ExternalDocumentation(props) {
   const className = classnames(s.externalDocumentation, props.className);
   return (
-    <div className={className}>
-      <Heading className={s.heading}>External documentation</Heading>
+    <section className={className}>
+      <Heading
+        className={s.heading}
+        level="h2"
+      >
+        External documentation
+      </Heading>
       <CommonMark>{ props.description }</CommonMark>
       <a
         className={s.url}
@@ -17,7 +22,7 @@ function ExternalDocumentation(props) {
       >
         { props.url }
       </a>
-    </div>
+    </section>
   );
 }
 ExternalDocumentation.propTypes = {
