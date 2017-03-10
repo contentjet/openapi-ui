@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import _ from 'lodash';
 import List from 'lib/components/common/List';
+import Heading from 'lib/components/common/Heading';
 import ServerVariable from 'lib/components/openapi/ServerVariable';
 import s from './ServerVariables.css';
 
@@ -11,16 +12,18 @@ function ServerVariables(props) {
   const className = classnames(s.serverVariables, props.className);
   return (
     <div className={className}>
+      <Heading level="h3">Variables</Heading>
       <List>
         {
           Object.keys(props.variables).map(name => {
+            let variable = props.variables[name];
             return (
               <li key={name}>
-                <span>{ name }</span>
                 <ServerVariable
-                  enum={_.get(props.variables, 'enum')}
-                  default={_.get(props.variables, 'default')}
-                  description={_.get(props.variables, 'description')}
+                  name={name}
+                  enum={_.get(variable, 'enum')}
+                  default={_.get(variable, 'default')}
+                  description={_.get(variable, 'description')}
                 />
               </li>
             );

@@ -11,7 +11,12 @@ function ExternalDocumentation(props) {
     <div className={className}>
       <Heading className={s.heading}>External documentation</Heading>
       <CommonMark>{ props.description }</CommonMark>
-      <a href={props.url}>{ props.url }</a>
+      <a
+        className={s.url}
+        href={props.url}
+      >
+        { props.url }
+      </a>
     </div>
   );
 }

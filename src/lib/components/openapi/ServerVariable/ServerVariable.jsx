@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import List from 'lib/components/common/List';
+import LabelValueListItem from 'lib/components/common/LabelValueListItem';
 import s from './ServerVariable.css';
 
 
@@ -9,16 +10,26 @@ function ServerVariable(props) {
   return (
     <div className={className}>
       <List>
-        <li><span>Default</span><span>{ props.default }</span></li>
-        <li><span>Enum</span><span>{ props.enum }</span></li>
-        <li><span>Description</span><span>{ props.description }</span></li>
+        <LabelValueListItem label="Name">
+          { props.name }
+        </LabelValueListItem>
+        <LabelValueListItem label="Default">
+          { props.default }
+        </LabelValueListItem>
+        <LabelValueListItem label="Enum">
+          { props.enum }
+        </LabelValueListItem>
+        <LabelValueListItem label="Description">
+          { props.description }
+        </LabelValueListItem>
       </List>
     </div>
   );
 }
 ServerVariable.propTypes = {
+  name: PropTypes.string.isRequired,
   enum: PropTypes.array,
-  default: PropTypes.node,
+  default: PropTypes.node.isRequired,
   description: PropTypes.string
 };
 

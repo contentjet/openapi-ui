@@ -1,7 +1,9 @@
 .labelValueListItem {
   lost-utility: clearfix;
   border-bottom: 1px #eee solid;
-  padding: 3px 0;
+  background: #f7f7f7;
+  padding: 3px 7px;
+  font-size: 11px;
 
   &:last-child {
     border-bottom: none;

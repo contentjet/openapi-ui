@@ -10,7 +10,14 @@ externalDocs:
   url: http://example.com/
 
 servers:
-  - url: https://api.contentjet.io/v1
+  - url: https://api.contentjet.io/{version}
+    description: The production API server
+    variables:
+      version:
+        default: v1
+        enum:
+          - v1
+        description: API version number
 
 tags:
   - name: Project

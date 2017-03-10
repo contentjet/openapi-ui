@@ -3,4 +3,9 @@
   .heading {
     font-size: 18px;
   }
+
+  .url {
+    display: block;
+    margin: .6em 0;
+  }
 }

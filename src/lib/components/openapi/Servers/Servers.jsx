@@ -19,9 +19,9 @@ function Servers(props) {
       </Heading>
       <List>
         {
-          props.servers.map((server, i) => {
+          props.servers.map(server => {
             return (
-              <li key={i}>
+              <li key={server.url}>
                 <Server {...server} />
               </li>
             );
