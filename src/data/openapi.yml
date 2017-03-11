@@ -13,7 +13,7 @@ info:
     url: https://opensource.org/licenses/MIT
 
 externalDocs:
-  description: Hello world
+  description: Further documentation can be found at the following link.
   url: http://example.com/
 
 servers:
@@ -46,6 +46,9 @@ paths:
             type: array
             items:
               $ref: '#/components/definitions/ProjectInvite'
+      externalDocs:
+        description: Further documentation can be found at the following link.
+        url: http://example.com/
 
     post:
       tags:

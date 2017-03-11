@@ -11,7 +11,6 @@ function Paths(props) {
     <section className={className}>
       <Heading
         id="paths"
-        className={s.heading}
         level="h2"
       >
         Paths
@@ -20,7 +19,7 @@ function Paths(props) {
         Object.keys(props.paths).map(path => {
           return (
             <div key={path} className={s.path}>
-              <h3 className={s.pathHeading}>{ path }</h3>
+              <Heading level="h3">{ path }</Heading>
               <PathItem {...props.paths[path]} />
             </div>
           );

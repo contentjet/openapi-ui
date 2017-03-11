@@ -13,7 +13,7 @@ function Info(props) {
     <section className={className}>
       <Heading
         id="info"
-        className={s.heading}
+        level="h1"
       >
         { props.title }
       </Heading>

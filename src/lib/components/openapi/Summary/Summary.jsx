@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
+import Heading from 'lib/components/common/Heading';
 import s from './Summary.css';
 
 
@@ -8,7 +9,7 @@ function Summary(props) {
   const className = classnames(s.summary, props.className);
   return (
     <div className={className}>
-      <h3>Summary</h3>
+      <Heading level="h3">Summary</Heading>
       <span>{ props.summary }</span>
     </div>
   );

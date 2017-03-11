@@ -11,10 +11,7 @@ function Servers(props) {
   const className = classnames(s.servers, props.className);
   return (
     <section className={className}>
-      <Heading
-        className={s.heading}
-        level={props.headingLevel}
-      >
+      <Heading level={props.headingLevel}>
         Servers
       </Heading>
       <List>

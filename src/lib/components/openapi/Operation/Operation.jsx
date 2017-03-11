@@ -6,6 +6,7 @@ import Summary from 'lib/components/openapi/Summary';
 import RequestBody from 'lib/components/openapi/RequestBody';
 import Parameters from 'lib/components/openapi/Parameters';
 import Security from 'lib/components/openapi/Security';
+import ExternalDocumentation from 'lib/components/openapi/ExternalDocumentation';
 import s from './Operation.css';
 
 
@@ -36,6 +37,13 @@ function Operation(props) {
       </Heading>
       <Summary summary={props.summary} />
       <CommonMark>{props.description}</CommonMark>
+      {
+        props.externalDocs &&
+        <ExternalDocumentation 
+          {...props.externalDocs}
+          headingLevel="h5"
+        />
+      }
       <Parameters parameters={props.parameters} />
       <Security
         headingLevel="h5"

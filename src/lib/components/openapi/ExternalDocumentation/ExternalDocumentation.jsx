@@ -9,10 +9,7 @@ function ExternalDocumentation(props) {
   const className = classnames(s.externalDocumentation, props.className);
   return (
     <section className={className}>
-      <Heading
-        className={s.heading}
-        level="h2"
-      >
+      <Heading level={props.headingLevel}>
         External documentation
       </Heading>
       <CommonMark>{ props.description }</CommonMark>
@@ -28,6 +25,10 @@ function ExternalDocumentation(props) {
 ExternalDocumentation.propTypes = {
   url: PropTypes.string.isRequired,
   description: PropTypes.string,
+  headingLevel: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6'])
+};
+ExternalDocumentation.defaultProps = {
+  headingLevel: 'h2'
 };
 
 
