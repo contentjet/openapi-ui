@@ -1,39 +1,112 @@
+$operation-color-get: #0dd0ff !default;
+$operation-color-post: #0ce894 !default;
+$operation-color-put: #ffc010 !default;
+$operation-color-delete: #e83f0c !default;
+$operation-color-options: #ce0be8 !default;
+$operation-color-head: #0b16e8 !default;
+$operation-color-patch: #e80ba9 !default;
+$operation-color-trace: #5f0be8 !default;
+
+$operation-header-background-get: color($operation-color-get lightness(+35%)) !default;
+$operation-header-background-post: color($operation-color-post lightness(+35%)) !default;
+$operation-header-background-put: color($operation-color-put lightness(+35%)) !default;
+$operation-header-background-delete: color($operation-color-delete lightness(+35%)) !default;
+$operation-header-background-options: color($operation-color-options lightness(+35%)) !default;
+$operation-header-background-head: color($operation-color-head lightness(+35%)) !default;
+$operation-header-background-patch: color($operation-color-patch lightness(+35%)) !default;
+$operation-header-background-trace: color($operation-color-trace lightness(+35%)) !default;
+
 .operation {
 
+  .header {
+    border-radius: 3px;
+    overflow: hidden;
+    lost-utility: clearfix;
+    line-height: 2.2em;
+    margin: 1em 0;
+
+    &.methodGet {
+      background: $operation-header-background-get;
+
+      .heading > .inner {
+        background: $operation-color-get;
+      }
+    }
+
+    &.methodPut {
+      background: $operation-header-background-put;
+
+      .heading > .inner {
+        background: $operation-color-put;
+      }
+    }
+
+    &.methodPost {
+      background: $operation-header-background-post;
+
+      .heading > .inner {
+        background: $operation-color-post;
+      }
+    }
+
+    &.methodDelete {
+      background: $operation-header-background-delete;
+
+      .heading > .inner {
+        background: $operation-color-delete;
+      }
+    }
+
+    &.methodOptions {
+      background: $operation-header-background-options;
+
+      .heading > .inner {
+        background: $operation-color-options;
+      }
+    }
+
+    &.methodHead {
+      background: $operation-header-background-head;
+
+      .heading > .inner {
+        background: $operation-color-head;
+      }
+    }
+
+    &.methodPatch {
+      background: $operation-header-background-patch;
+
+      .heading > .inner {
+        background: $operation-color-patch;
+      }
+    }
+
+    &.methodTrace {
+      background: $operation-header-background-trace;
+
+      .heading > .inner {
+        background: $operation-color-trace;
+      }
+    }
+  }
+
+  .summary {
+    lost-column: 8/12;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
   .heading {
+    lost-column: 4/12;
+    margin: 0;
     text-transform: uppercase;
-  }
+    color: #fff;
 
-  .methodGet {
-
-  }
-
-  .methodPut {
-
-  }
-
-  .methodPost {
-
-  }
-
-  .methodDelete {
-
-  }
-
-  .methodOptions {
-
-  }
-
-  .methodHead {
-
-  }
-
-  .methodPatch {
-
-  }
-
-  .methodTrace {
-
+    .inner {
+      display: inline-block;
+      padding: 0 5px;
+    }
   }
 
 }

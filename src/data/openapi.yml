@@ -127,6 +127,48 @@ paths:
             type: array
             items:
               $ref: '#/components/definitions/Project'
+    put:
+      description: ''
+      responses:
+        '200':
+          description: The updated project.
+          schema:
+            $ref: '#/components/definitions/Project'
+    delete:
+      tags:
+        - Project
+      description: ''
+      responses:
+        '204':
+          description: Returns nothing.
+    options:
+      tags:
+        - Project
+      description: ''
+      responses:
+        '200':
+          description: TODO.
+    trace:
+      tags:
+        - Project
+      description: ''
+      responses:
+        '200':
+          description: TODO.
+    head:
+      tags:
+        - Project
+      description: ''
+      responses:
+        '200':
+          description: TODO.
+    patch:
+      tags:
+        - Project
+      description: ''
+      responses:
+        '200':
+          description: TODO.
     parameters:
       - $ref: '#/components/parameters/projectUUID'
 
@@ -172,7 +214,7 @@ paths:
     get:
       tags:
         - EntryTag
-      description: ''
+      summary: 'List Entry Tags'
       responses:
         '200':
           description: A list of EntryTags.

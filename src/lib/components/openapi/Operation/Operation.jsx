@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import CommonMark from 'lib/components/common/CommonMark';
 import Heading from 'lib/components/common/Heading';
-import Summary from 'lib/components/openapi/Summary';
 import RequestBody from 'lib/components/openapi/RequestBody';
 import Parameters from 'lib/components/openapi/Parameters';
 import Security from 'lib/components/openapi/Security';
@@ -13,7 +12,7 @@ import s from './Operation.css';
 function Operation(props) {
   const className = classnames(s.operation, props.className);
 
-  const headingClassName = classnames(s.heading, {
+  const headerClassName = classnames(s.header, {
     [s.methodGet]: props.method === 'get',
     [s.methodPut]: props.method === 'put',
     [s.methodPost]: props.method === 'post',
@@ -25,21 +24,23 @@ function Operation(props) {
   });
 
   return (
-    <div
+    <section
       id={props.operationId}
       className={className}
     >
-      <Heading
-        className={headingClassName}
-        level="h4"
-      >
-        { props.method }
-      </Heading>
-      <Summary summary={props.summary} />
+      <header className={headerClassName}>
+        <Heading
+          className={s.heading}
+          level="h4"
+        >
+          <span className={s.inner}>{ props.method }</span>
+        </Heading>
+        <span className={s.summary}>{props.summary}</span>
+      </header>
       <CommonMark>{props.description}</CommonMark>
       {
         props.externalDocs &&
-        <ExternalDocumentation 
+        <ExternalDocumentation
           {...props.externalDocs}
           headingLevel="h5"
         />
@@ -50,7 +51,7 @@ function Operation(props) {
         securityRequirements={props.security}
       />
       <RequestBody {...props.requestBody} />
-    </div>
+    </section>
   );
 }
 Operation.propTypes = {
