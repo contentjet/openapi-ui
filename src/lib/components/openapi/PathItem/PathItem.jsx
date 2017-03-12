@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 import _ from 'lodash';
 import classnames from 'classnames';
+import Heading from 'lib/components/common/Heading';
 import Operation from 'lib/components/openapi/Operation';
-import Summary from 'lib/components/openapi/Summary';
 import CommonMark from 'lib/components/common/CommonMark';
 import { operationMethods } from 'constants';
 import s from './PathItem.css';
@@ -19,8 +19,16 @@ const mergeParameters = (pathItemParameters = [], operationParameters = []) => {
 function PathItem(props) {
   const className = classnames(s.pathItem, props.className);
   return (
-    <div className={className}>
-      <Summary summary={props.summary} />
+    <section className={className}>
+      <header className={s.header}>
+        <Heading
+          className={s.heading}
+          level="h3"
+        >
+          { props.path }
+        </Heading>
+        <span className={s.summary}>{props.summary}</span>
+      </header>
       <CommonMark>{ props.description }</CommonMark>
       {
         operationMethods
@@ -38,10 +46,11 @@ function PathItem(props) {
           );
         })
       }
-    </div>
+    </section>
   );
 }
 PathItem.propTypes = {
+  path: PropTypes.string.isRequired,
   summary: PropTypes.string,
   description: PropTypes.string,
   get: PropTypes.object,

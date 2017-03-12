@@ -1,3 +1,30 @@
 .pathItem {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px 0;
 
+  .header {
+    lost-utility: clearfix;
+    background: #eee;
+    padding: 0 10px;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+    line-height: 2.1em;
+  }
+
+  .heading {
+    font-size: 14px;
+    lost-column: 4/12;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+
+  .summary {
+    lost-column: 8/12;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
 }

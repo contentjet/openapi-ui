@@ -17,13 +17,17 @@ $operation-header-background-patch: color($operation-color-patch lightness(+35%)
 $operation-header-background-trace: color($operation-color-trace lightness(+35%)) !default;
 
 .operation {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 5px;
+  margin: 10px 0;
 
   .header {
-    border-radius: 3px;
+    border-radius: 4px 4px 0 0;
     overflow: hidden;
     lost-utility: clearfix;
     line-height: 2.2em;
-    margin: 1em 0;
+    margin: 0 0 1em 0;
 
     &.methodGet {
       background: $operation-header-background-get;

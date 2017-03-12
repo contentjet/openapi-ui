@@ -18,10 +18,11 @@ function Paths(props) {
       {
         Object.keys(props.paths).map(path => {
           return (
-            <div key={path} className={s.path}>
-              <Heading level="h3">{ path }</Heading>
-              <PathItem {...props.paths[path]} />
-            </div>
+            <PathItem
+              key={path}
+              {...props.paths[path]}
+              path={path}
+            />
           );
         })
       }
