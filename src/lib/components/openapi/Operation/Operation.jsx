@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import classnames from 'classnames';
 import CommonMark from 'lib/components/common/CommonMark';
 import Heading from 'lib/components/common/Heading';
-import RequestBody from 'lib/components/openapi/RequestBody';
+import RequestBodies from 'lib/components/openapi/RequestBodies';
 import Parameters from 'lib/components/openapi/Parameters';
 import Security from 'lib/components/openapi/Security';
 import ExternalDocumentation from 'lib/components/openapi/ExternalDocumentation';
@@ -50,7 +50,7 @@ function Operation(props) {
         headingLevel="h5"
         securityRequirements={props.security}
       />
-      <RequestBody {...props.requestBody} />
+      <RequestBodies requestBodies={props.requestBody} />
     </section>
   );
 }
@@ -62,7 +62,7 @@ Operation.propTypes = {
   externalDocs: PropTypes.object,
   operationId: PropTypes.string,
   parameters: PropTypes.array,
-  requestBody: PropTypes.object,
+  requestBody: PropTypes.array,
   responses: PropTypes.object.isRequired,
   callbacks: PropTypes.object,
   deprecated: PropTypes.bool,

@@ -55,15 +55,15 @@ paths:
         - Invite
       description: ''
       requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                email:
-                  type: string
+        - content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    email:
+                      type: string
       responses:
         '201':
           description: Returns a list of ProjectInvites.
