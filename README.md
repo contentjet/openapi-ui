@@ -4,7 +4,7 @@ This is a React based single page app which renders documentation from a valid O
 
 # NOTE
 
-This project is work-in-progress/experimental at this stage. Contributions and feedback welcome.
+This project was experimental and is not being actively maintained.
 
 ## Getting started
 
